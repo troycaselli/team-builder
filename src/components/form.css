@@ -1,0 +1,47 @@
+h1{
+  font-size: 2.5rem;
+}
+label {
+  font-size: 1rem;
+}
+form {
+    padding-top: 4%;
+  }
+form,
+section {
+display: flex;
+flex-direction: column;
+width: 60vw;
+background: #003153;
+border-radius: 5px;
+margin-bottom: 4%;
+}
+
+.container {
+padding: 0 10% 2% 10%;
+display: flex;
+justify-content: space-between;
+}
+
+input,
+select {
+border-color: #000036;
+outline: none;
+border-radius: 3px;
+background: rgb(218, 207, 207);
+}
+
+select {
+cursor: pointer;
+border: 2px solid;
+}
+.submitButton {
+width: 80px;
+font-size: 0.8rem;
+border-radius: 3px;
+background: rgb(218, 207, 207);
+border-color: #000036;
+color: #000036;
+cursor: pointer;
+margin-bottom: 4%;
+}

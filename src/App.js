@@ -1,44 +1,34 @@
 import {useState} from 'react';
+import Form from './components/form';
+import Member from './components/member';
 import './App.css';
 
+const membersData = [{
+  name: 'Troy Caselli',
+  email: 'swordandtrowel1689@gmail.com',
+  role: 'project manager',
+  commitment: 'full time'
+},
+{
+  name: 'John Caselli',
+  email: 'swordandtrowel1689@gmail.com',
+  role: 'project manager',
+  commitment: 'full time'
+}];
+
 function App() {
+  const [members, setMembers] = useState(membersData);
+console.log(members);
   return (
     <div className="App">
-      <h1>Team Members Form</h1>
-      <form>
-        <div className='container'>
-          <label>Name:</label>
-          <input type='text' placeholder='John Smith' />
-        </div>
-        <div className='container'>
-          <label>Email:</label>
-          <input type='email' placeholder='johnsmith@gmail.com' />
-        </div>
-        <div className='container'>
-          <label>Role:</label>
-          <select>
-          <option>---Select---</option>
-            <option>Backend</option>
-            <option>Frontend</option>
-            <option>Fullstack</option>
-            <option>Data Science</option>
-          </select>
-        </div>
-        <div className='container'>
-          <label>Weekly Commitment:</label>
-          <select>
-            <option>---Select---</option>
-            <option>Full Time</option>
-            <option>Part Time</option>
-            <option>None!</option>
-          </select>
-        </div>
-        <div>
-          <button className='submitButton'>Submit</button>
-        </div>
-      </form>
+      <Form />
       <section>
         <h3>Members</h3>
+        <div>
+          {members.map(member => {
+            return <Member member={member}/>;
+          })}
+        </div>
       </section>
     </div>
   );
