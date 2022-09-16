@@ -1,7 +1,7 @@
 import './form.css';
 
 export default function Form(props) {
-    const {changeValues, formValues, submitForm} = props;
+    const {changeValues, formValues, submitForm, error} = props;
 
     return (
         <div className='formCard'>
@@ -45,6 +45,7 @@ export default function Form(props) {
                 </div>
                 <div>
                 <button className='submitButton'>Submit</button>
+                {error && <h4 id='error'>{error}</h4>}
                 </div>
             </form>
         </div>

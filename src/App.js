@@ -7,15 +7,8 @@ const membersData = [{
   id: 1,
   name: 'Troy Caselli',
   email: 'swordandtrowel1689@gmail.com',
-  role: 'project manager',
-  commitment: 'full time'
-},
-{
-  id: 2,
-  name: 'John Caselli',
-  email: 'swordandtrowel1689@gmail.com',
-  role: 'project manager',
-  commitment: 'full time'
+  role: 'Project Manager',
+  commitment: 'Full Time'
 }];
 
 const initialValues = {
@@ -29,6 +22,7 @@ const initialValues = {
 function App() {
   const [members, setMembers] = useState(membersData);
   const [formValues, setFormValues] = useState(initialValues);
+  const [error, setError] = useState('');
 
   const changeValues = evt => {
     setFormValues({...formValues, id: members.length + 1, [evt.target.name]: evt.target.value})
@@ -36,14 +30,18 @@ function App() {
 
   const submitForm = evt => {
     evt.preventDefault();
-    // setMembers(...members, formValues)
+    if(!formValues.name || !formValues.email || !formValues.role || !formValues.commitment) {
+      setError('*All fields must be filled out*')
+    } else {
+      setMembers([...members, formValues])
+      setFormValues(membersData);
+      setError('');
+    }
   }
-  console.log(formValues)
-  console.log(members)
 
   return (
     <div className="App">
-      <Form changeValues={changeValues} formValues={formValues} submitForm={submitForm}/>
+      <Form changeValues={changeValues} formValues={formValues} submitForm={submitForm} error={error}/>
       <section>
         <h3>Members</h3>
         <div>
