@@ -1,23 +1,33 @@
 import './form.css';
 
 export default function Form(props) {
+    const {changeValues, formValues, submitForm} = props;
 
     return (
         <div className='formCard'>
             <h1>Team Members Form</h1>
-            <form>
+            <form onSubmit={submitForm}>
                 <div className='container'>
                 <label>Name:</label>
-                <input type='text' placeholder='John Smith' />
+                <input 
+                    name='name'
+                    value={formValues.name || ''}
+                    type='text'
+                    placeholder='John Smith'
+                    onChange={changeValues} />
                 </div>
                 <div className='container'>
                 <label>Email:</label>
-                <input type='email' placeholder='johnsmith@gmail.com' />
+                <input
+                    name='email'
+                    value={formValues.email || ''}
+                    type='email' placeholder='johnsmith@gmail.com'
+                    onChange={changeValues} />
                 </div>
                 <div className='container'>
                 <label>Role:</label>
-                <select>
-                <option>---Select---</option>
+                <select name='role' onChange={changeValues} value={formValues.role || ''}>
+                    <option>---Select---</option>
                     <option>Backend</option>
                     <option>Frontend</option>
                     <option>Fullstack</option>
@@ -26,7 +36,7 @@ export default function Form(props) {
                 </div>
                 <div className='container'>
                 <label>Weekly Commitment:</label>
-                <select>
+                <select name='commitment' onChange={changeValues} value={formValues.commitment || ''}>
                     <option>---Select---</option>
                     <option>Full Time</option>
                     <option>Part Time</option>
