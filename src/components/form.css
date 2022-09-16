@@ -1,3 +1,6 @@
+.formCard {
+  width: 75%;
+}
 h1{
   font-size: 2.5rem;
 }
@@ -11,7 +14,7 @@ form,
 section {
 display: flex;
 flex-direction: column;
-width: 60vw;
+width: 100%;
 background: #003153;
 border-radius: 5px;
 margin-bottom: 4%;

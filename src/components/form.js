@@ -3,7 +3,7 @@ import './form.css';
 export default function Form(props) {
 
     return (
-        <div>
+        <div className='formCard'>
             <h1>Team Members Form</h1>
             <form>
                 <div className='container'>
