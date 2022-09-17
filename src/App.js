@@ -34,10 +34,11 @@ function App() {
       setError('*All fields must be filled out*')
     } else {
       setMembers([...members, formValues])
-      setFormValues(membersData);
+      setFormValues(initialValues);
       setError('');
     }
   }
+  console.log(formValues);
 
   return (
     <div className="App">

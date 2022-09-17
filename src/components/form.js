@@ -21,7 +21,8 @@ export default function Form(props) {
                 <input
                     name='email'
                     value={formValues.email || ''}
-                    type='email' placeholder='johnsmith@gmail.com'
+                    type='email'
+                    placeholder='johnsmith@gmail.com'
                     onChange={changeValues} />
                 </div>
                 <div className='container'>
