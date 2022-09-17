@@ -28,11 +28,11 @@ export default function Form(props) {
                 <div className='container'>
                 <label>Role:</label>
                 <select name='role' onChange={changeValues} value={formValues.role || ''}>
-                    <option>---Select---</option>
-                    <option>Backend</option>
-                    <option>Frontend</option>
-                    <option>Fullstack</option>
-                    <option>Data Science</option>
+                    <option value=''>---Select---</option>
+                    <option value='1'>Backend</option>
+                    <option value='2'>Frontend</option>
+                    <option value='3'>Fullstack</option>
+                    <option value='4'>Data Science</option>
                 </select>
                 </div>
                 <div className='container'>
