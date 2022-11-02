@@ -29,10 +29,10 @@ export default function Form(props) {
                 <label>Role:</label>
                 <select name='role' onChange={changeValues} value={formValues.role || ''}>
                     <option value=''>---Select---</option>
-                    <option value='1'>Backend</option>
-                    <option value='2'>Frontend</option>
-                    <option value='3'>Fullstack</option>
-                    <option value='4'>Data Science</option>
+                    <option value='Backend'>Backend</option>
+                    <option value='Frontend'>Frontend</option>
+                    <option value='Fullstack'>Fullstack</option>
+                    <option value='Data Science'>Data Science</option>
                 </select>
                 </div>
                 <div className='container'>
