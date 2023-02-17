@@ -5,8 +5,8 @@ import './App.css';
 
 const membersData = [{
   id: 1,
-  name: 'Troy Caselli',
-  email: 'swordandtrowel1689@gmail.com',
+  name: 'George Washington',
+  email: '1776Champ@gmail.com',
   role: 'Project Manager',
   commitment: 'Full Time'
 }];
