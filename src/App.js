@@ -2,7 +2,7 @@ import {useState} from 'react';
 import Form from './components/form';
 import Member from './components/member';
 import './App.css';
-// add comment
+
 const membersData = [{
   id: 1,
   name: 'George Washington',
